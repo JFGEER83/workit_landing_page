@@ -1,0 +1,200 @@
+@font-face {
+    font-family: "Fraunces";
+    src: local("/starter-code/assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf"),
+      url("/starter-code/assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf") format("truetype"),;
+  }
+@font-face {
+    font-family: "Manrope-Regular";
+    src: url("/starter-code/assets/fonts/manrope/static/Manrope-Regular.ttf") format("truetype");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*
+1. Importer les fonts -> voir assets/fonts
+5. flexbox
+*/
+:root{
+    --dark-purple-color: #24053E;
+    --eucalyptus-color: #44FFA1;
+    --davys-grey-color: #584D62;
+    --ghost-white-color: #FCF8FF;
+    --white-color: #FFFFFF;
+}
+.heading-L{
+    font-size: 80px;
+    font-weight: normal;
+    line-height: 80px;
+    font-family: "Fraunces";
+}
+.heading-M{
+    font-size: 56px;
+    font-weight: normal;
+    line-height: 64px;
+    font-family: "Fraunces";
+}
+.heading-S{
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 40px;
+    font-family: "Fraunces";
+}
+.body{
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 32px;
+    font-family: "Manrope-Regular";
+}
+.d-flex{
+    display: flex;
+}
+.m-t{
+    margin-top: 2em;
+}
+.button-primary{
+    background-color: var(--eucalyptus-color);
+    border: none;
+    padding: 0.8em 0.8em;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    font-family: "Manrope-Regular";
+    color: var(--dark-purple-color);
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+    border: 1px solid var(--eucalyptus-color);
+}
+.button-primary:hover{
+    background-color: var(--dark-purple-color);
+    color: var(--eucalyptus-color);
+    border: 1px solid var(--eucalyptus-color);
+}
+.button-secondary{
+    background-color: var(--dark-purple-color);
+    border-bottom: solid 2px var(--eucalyptus-color);
+    padding: 10px 5px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    font-family: "Manrope-Regular";
+    color: var(--white-color);
+    cursor: pointer;
+}
+.button-secondary:hover{
+    background-color: var(--dark-purple-color);
+    color: var(--eucalyptus-color);
+    border-bottom: solid 2px var(--eucalyptus-color);
+}
+ul,li{
+    list-style: none;
+}
+.marg{
+    margin: 0 10rem;
+}
+.b-bottom{
+    border-bottom: solid 3px var(--eucalyptus-color);
+}
+/* Header */
+header {
+    background-color: var(--dark-purple-color);
+    padding: 32px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav{
+    width: 100%;
+}
+header nav ul{
+    justify-content: space-between;
+    align-items: center;
+}
+header nav ul li:last-child{
+    padding-bottom:0;
+}
+/* Hero */
+.hero-container{
+    background-color: var(--dark-purple-color);
+    height: 70vh;
+    justify-content: center;
+}
+.hero{
+    background-color: var(--dark-purple-color);
+    color: var(--white-color);
+    width: 40vw;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5em;
+}
+.hero h1{
+    text-align: center;
+}
+.hero h1 span{
+   display: inline-block;
+   height: 1em;
+}
+.hero .button-primary{
+    margin-top: 2em;
+    align-self: center;
+    margin-bottom: 3em;
+}
+.hero .img{
+    width: 100%;
+    align-self: center;
+}
+.hero .img img{
+    width: 100%;
+}
+/*PRES*/
+.pres{
+    padding-top: 10em;
+    height: 80vh;
+    justify-content:space-evenly;
+    background-color: var(--ghost-white-color);
+}
+
+.pres .card{
+    text-align: center;
+    width: 20vw;
+    flex-direction: column;
+}
+.pres .card .number{
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 50%;
+    align-self: center;
+}
+/*TEST*/
+.test{
+    height: 180vh;
+    background-color: var(--white-color);
+    position: relative;
+}
+.test .pics{
+    width: 30%;
+    position: absolute;
+    top: 150px;
+    left: 250px;
+}
+.test .pics img{
+    width: 100%;
+}
+.test .card-container{
+    position: absolute;
+    left: 670px;
+    top: 340px;
+    width: 40%;
+    background-color: var(--dark-purple-color);
+    color: var(--white-color);
+    padding: 3.5em 4em;
+}
+.test .card-container .button-primary{
+    width: 180px;
+}
